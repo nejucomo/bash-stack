@@ -25,33 +25,33 @@ function assert {
 # Just in case these were in the caller's environment:
 unset S
 
-assert 'stack-empty S'
-assert '[ "$(stack-length S)" -eq 0 ]'
+assert 'stack empty S'
+assert '[ "$(stack length S)" -eq 0 ]'
 
-assert 'stack-push S foo'
-assert '! stack-empty S'
-assert '[ "$(stack-length S)" -eq 1 ]'
-assert '[ "$(stack-peek S)" = foo ]'
-assert '[ "$(stack-peek S)" = foo ]'
-assert '[ "$(stack-length S)" -eq 1 ]'
+assert 'stack push S foo'
+assert '! stack empty S'
+assert '[ "$(stack length S)" -eq 1 ]'
+assert '[ "$(stack peek S)" = foo ]'
+assert '[ "$(stack peek S)" = foo ]'
+assert '[ "$(stack length S)" -eq 1 ]'
 
-assert 'stack-push S bar'
-assert '! stack-empty S'
-assert '[ "$(stack-peek S)" = bar ]'
-assert '[ "$(stack-length S)" -eq 2 ]'
-assert '[ "$(stack-peek S)" = bar ]'
-assert '[ "$(stack-length S)" -eq 2 ]'
+assert 'stack push S bar'
+assert '! stack empty S'
+assert '[ "$(stack peek S)" = bar ]'
+assert '[ "$(stack length S)" -eq 2 ]'
+assert '[ "$(stack peek S)" = bar ]'
+assert '[ "$(stack length S)" -eq 2 ]'
 
-assert 'stack-pop S'
-assert '! stack-empty S'
-assert '[ "$(stack-length S)" -eq 1 ]'
-assert '[ "$(stack-peek S)" = foo ]'
-assert '[ "$(stack-peek S)" = foo ]'
-assert '[ "$(stack-length S)" -eq 1 ]'
+assert 'stack pop S'
+assert '! stack empty S'
+assert '[ "$(stack length S)" -eq 1 ]'
+assert '[ "$(stack peek S)" = foo ]'
+assert '[ "$(stack peek S)" = foo ]'
+assert '[ "$(stack length S)" -eq 1 ]'
 
-assert 'stack-pop S'
-assert 'stack-empty S'
-assert '[ "$(stack-length S)" -eq 0 ]'
+assert 'stack pop S'
+assert 'stack empty S'
+assert '[ "$(stack length S)" -eq 0 ]'
 
 [ "$FCNT" -gt 0 ] && echo
 
