@@ -2,7 +2,7 @@
 
 set -e
 
-source "$(readlink -f "$(dirname "$0")")/bash-stack.sh"
+source "$(readlink -f "$(dirname "$0")")/stack.sh"
 
 SCNT=0 # success count
 FCNT=0 # failure count

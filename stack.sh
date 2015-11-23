@@ -1,4 +1,4 @@
-# bash-stack
+# stack.sh - A "stack" function providing stack abstraction over bash arrays.
 #
 # copyright 2015, Nathan Wilcox, see ./license.txt
 
